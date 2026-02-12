@@ -22,6 +22,20 @@ Homepage = "https://github.com/KageKirin/py-logrunner"
 Documentation = "https://github.com/KageKirin/py-logrunner"
 Repository = "https://github.com/KageKirin/py-logrunner.git"
 
+[project.optional-dependencies]
+dev = [
+  "pytest>=9.0",
+]
+
+[tool.pytest]
+minversion = "9.0"
+addopts = ["-ra", "-q"]
+pythonpath = ["src"]
+testpaths = [
+  "tests",
+]
+
+
 [tool.setuptools.packages.find]
 where = ["src/"]
 include = ["logrunner"]
