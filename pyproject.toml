@@ -1,0 +1,27 @@
+[build-system]
+requires = ["wheel", "setuptools",  "attrs>=17.1"] #"versioningit",
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logrunner"
+dynamic = ["version"]
+description = "logrunner.run([cmd]) wraps subprocess.run([cmd]) to allow continuous output as well as capture of stdout"
+readme = "README.md"
+requires-python = ">= 3.10"
+license = {text = "MIT"}
+
+authors = [
+  {name = "kagekirin", email = "kagekirin@gmail.com"},
+]
+maintainers = [
+  {name = "kagekirin", email = "kagekirin@gmail.com"},
+]
+
+[project.urls]
+Homepage = "https://github.com/KageKirin/py-logrunner"
+Documentation = "https://github.com/KageKirin/py-logrunner"
+Repository = "https://github.com/KageKirin/py-logrunner.git"
+
+[tool.setuptools.packages.find]
+where = ["src/"]
+include = ["logrunner"]
