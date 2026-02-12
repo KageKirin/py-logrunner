@@ -1,0 +1,12 @@
+[project]
+name = "logrunner"
+description = "logrunner.run([cmd]) wraps subprocess.run([cmd]) to allow continuous output as well as capture of stdout"
+version = "0.0.1"
+requires-python = ">= 3.10"
+
+authors = [
+  {name = "kagekirin", email = "kagekirin@gmail.com"},
+]
+maintainers = [
+  {name = "kagekirin", email = "kagekirin@gmail.com"},
+]
