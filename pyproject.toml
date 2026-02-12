@@ -1,5 +1,5 @@
 [build-system]
-requires = ["wheel", "setuptools",  "attrs>=17.1"] #"versioningit",
+requires = ["wheel", "setuptools",  "attrs>=17.1", "versioningit"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -39,3 +39,11 @@ testpaths = [
 [tool.setuptools.packages.find]
 where = ["src/"]
 include = ["logrunner"]
+
+[tool.versioningit.next-version]
+method = "smallest"
+
+[tool.versioningit.format]
+distance = "{next_version}.dev{distance}+{vcs}{rev}"
+dirty = "{base_version}+d{build_date:%Y%m%d}"
+distance-dirty = "{next_version}.dev{distance}+{vcs}{rev}.d{build_date:%Y%m%d}"
