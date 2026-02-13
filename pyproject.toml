@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = "logrunner.run([cmd]) wraps subprocess.run([cmd]) to allow continuous output as well as capture of stdout"
 readme = "README.md"
 requires-python = ">= 3.10"
-license = {text = "MIT"}
+license = "MIT"
 
 authors = [
   {name = "kagekirin", email = "kagekirin@gmail.com"},
