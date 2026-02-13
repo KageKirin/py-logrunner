@@ -17,6 +17,16 @@ maintainers = [
   {name = "kagekirin", email = "kagekirin@gmail.com"},
 ]
 
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+]
+
+
+
 [project.urls]
 Homepage = "https://github.com/KageKirin/py-logrunner"
 Documentation = "https://github.com/KageKirin/py-logrunner"
