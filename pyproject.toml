@@ -8,7 +8,8 @@ dynamic = ["version"]
 description = "logrunner.run([cmd]) wraps subprocess.run([cmd]) to allow continuous output as well as capture of stdout"
 readme = "README.md"
 requires-python = ">= 3.10"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE"]
 
 authors = [
   {name = "kagekirin", email = "kagekirin@gmail.com"},
@@ -16,6 +17,16 @@ authors = [
 maintainers = [
   {name = "kagekirin", email = "kagekirin@gmail.com"},
 ]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+]
+
+
 
 [project.urls]
 Homepage = "https://github.com/KageKirin/py-logrunner"
@@ -25,6 +36,7 @@ Repository = "https://github.com/KageKirin/py-logrunner.git"
 [project.optional-dependencies]
 dev = [
   "pytest>=9.0",
+  "ruff",
 ]
 
 [tool.pytest]
