@@ -1,0 +1,20 @@
+name: build-branch
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+
+concurrency:
+  group: ${{ github.actor_id }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-tag-release:
+    permissions:
+      contents: write
+      packages: read
+    uses: kagekirin/gha-py-toolbox/.github/workflows/github-release.yml@main
+    with:
+      dry-run: true
+    secrets: inherit
