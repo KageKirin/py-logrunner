@@ -1,0 +1,22 @@
+name: build-ci
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+    types: [closed]
+
+concurrency:
+  group: ${{ github.actor_id }}-${{ github.workflow }}-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  tag-release:
+    if: github.event.pull_request.merged == true
+    permissions:
+      contents: write
+      packages: read
+    uses: kagekirin/gha-py-toolbox/.github/workflows/github-release.yml@main
+    with:
+      dry-run: false
+    secrets: inherit
