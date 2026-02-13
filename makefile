@@ -18,6 +18,9 @@ t test:
 .PHONY: pack
 p pack:
 	uv build
+	ls -alG dist/logrunner-*.tar.gz dist/logrunner-*.whl
+	tar tvf dist/logrunner-*.tar.gz
+	tar tvf dist/logrunner-*.whl
 
 .PHONY: clean
 c clean:
